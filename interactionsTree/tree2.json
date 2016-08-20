@@ -1,0 +1,49 @@
+{
+	"S|main_section": {
+		"S|section_name": {
+			"L|Do you like cats ?": {
+				"_response":"Cats|speak|yes I do !",
+					"_comment": "yes I do",
+					"L|And dogs ?": {
+						"_response":"Cats|speak|well I prefer cats. And you ?",
+						"R|(prefer).*(dogs)": {
+							"_response": "Cats|speak|OK too bad. But I still think that we can get along... Don't you ?",
+								"R|(yes)|(shure)|(for shure)|(no problem)": {
+									"_response":"Cats|speak|cool..."
+								}
+							},
+						"R|(prefer).*(cats?)": {
+								"_response": "Cats|speak|Ha cool ! You got me worried here for a bit"
+							}
+						}
+			}
+		},
+		"R|.*(dogs).*": {
+			"_response":"Dogs|likeOrNot",
+			"_comment": "Yes i do but I prefer dogs",
+			"R|(the).*(first).*(one)": {"_response":"function5"},
+			"R|(the).*(second).*(one)": {"_response":"function6"}
+		},
+		"S|section_pouette": {
+			"L|hello": {
+				"_response": "plop1",
+				"L|how": {
+					"_response": "plop2",
+					"_jump": "fuckyou",					
+					"L|are": {
+						"_response": "plop3",
+						"_label": "fuckyou",
+						"L|you": {
+							"_response": "plop4"
+						}
+					}
+				},
+				"S|section_other_pouette": {
+					"L|again": {
+						"_response": "plop again"
+					}
+				}
+			}
+		}
+	}
+}

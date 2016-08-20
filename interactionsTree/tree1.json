@@ -1,0 +1,14 @@
+{
+    "L|i would like to hear something": {
+		"_response":"function1",
+        "_comment": "would you like to hear some music",
+        "L|yes": {"_response":"function2"},
+        "L|no": {"_response":"function3"}
+    },
+    "R|(play).*(me).*(this).*(music)": {
+		"_response":"function4",
+        "_comment": "do you want to hear XXX or XXXX",
+        "R|(the).*(first).*(one)": {"_response":"function5"},
+        "R|(the).*(second).*(one)": {"_response":"function6"}
+    }
+}
