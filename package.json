@@ -1,8 +1,30 @@
 {
-    "name": "NodeJsApplication",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "WINDO",
-    "contributors": [],
-    "dependencies": {}
+  "name": "docteur-rs",
+  "version": "1.0.0",
+  "description": "This library allows the user to parse strings using an 'interaction tree'. For instance it can be used to create tchat AI. This library is under active development and is only at its begining.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Docteur-RS/Caoutchouc.git"
+  },
+  "keywords": [
+    "caoutchouc",
+    "regex",
+    "parsing",
+    "AI"
+  ],
+  "author": "Lancelot Emilien <remember.softwares@gmail.com> (https://github.com/Docteur-RS/)",
+  "licenses": [
+  {
+    "type": "Creative Commons",
+    "url": "https://creativecommons.org/licenses/by-nd/4.0/"
+  }
+], 
+  "bugs": {
+    "url": "https://github.com/Docteur-RS/Caoutchouc/issues"
+  },
+  "homepage": "https://github.com/Docteur-RS/Caoutchouc#readme"
 }
