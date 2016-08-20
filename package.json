@@ -1,5 +1,5 @@
 {
-  "name": "caoutchouc",
+  "name": "Caoutchouc",
   "version": "1.0.0",
   "description": "This library allows the user to parse strings using an 'interaction tree'. For instance it can be used to create tchat AI. This library is under active development and is only at its begining.",
   "main": "main.js",
