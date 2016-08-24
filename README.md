@@ -536,7 +536,7 @@ Don't forget that you would need to create a new cursor to access the other sect
 or you could move the current cursor to this section:  
 ```moveCursor("foobar", "smart_section");```
 
-Conversation 6  
+##Conversation 6##
 *User*:	I would like to order some pizzas...  
 *AI*:	**Sure ! What size ?**  
 *User*:	Medium  
