@@ -537,22 +537,22 @@ or you could move the current cursor to this section:
 ```moveCursor("foobar", "smart_section");```
 
 Conversation 6  
-User:	I would like to order some pizzas...  
-AI:		Sure ! What size ?  
-User:	Medium  
-AI:		Ok... Do you want me to order it now ?  
-User:	YES  
-AI:		Ordering it now... Do you want an other ?  
-User: 	yes  
-AI:		Ok, what size ? 	//jumps back to an upper level in the tree  
-User: 	small  
-AI: 	Ok... Do you want me to order it now ?  
-User: 	No  
-AI: 	No probleme just ask when you are ready  
-User: 	Order the pizzas now !  
-AI: 	Ordering it now... Do you want an other ? //jumped to an other level of the tree  
-User: 	No  
-AI: 	Have a good meal  
+*User*:	I would like to order some pizzas...  
+*AI*:	**Sure ! What size ?**  
+*User*:	Medium  
+*AI*:	**Ok... Do you want me to order it now ?**  
+*User*:	YES  
+*AI*:	**Ordering it now... Do you want an other ?**  
+*User*: yes  
+*AI*:	**Ok, what size ? 	//jumps back to an upper level in the tree**  
+*User*: small  
+*AI*: 	**Ok... Do you want me to order it now ?**  
+*User*: No  
+*AI*: 	**No probleme just ask when you are ready**  
+*User*: Order the pizzas now !  
+*AI*: 	**Ordering it now... Do you want an other ?** //jumped to an other level of the tree  
+*User*: No  
+*AI*: 	**Have a good meal**  
 //jumps to "smart_section"  
 
 There are other possible scenarios for this section.
