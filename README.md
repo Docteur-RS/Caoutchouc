@@ -193,6 +193,7 @@ when you have this tree:
 //remplacer par fig 05
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913983/a8bbf060-699e-11e6-9304-57ff9c5c604c.png" >
 Text version:
+```json
 {
 	"L|(1)level 1": {
 			"L|(1)level 2": {
@@ -206,6 +207,7 @@ Text version:
 	},
 	"_label": "labelName"
 }
+```
 
 when the key "(1)level 3" matches, **the cursor moves to its associated object**. Then it sees the jump instruction and the cursor is **moved to the indicated level**.
 You can jump to any label or to any section by name. You don't have to care about label or section positions.
@@ -218,6 +220,7 @@ It must be present in **each level**, except root level.
 
 If we take this tree:
 //remplacer par fig 06 (Pas obligé)
+```json
 {
 	"L|(1)level 1": {
 			"L|(1)level 2": {
@@ -231,6 +234,7 @@ If we take this tree:
 	},
 	"_label": "labelName"
 }
+```
 This is not a valid tree. The right version is:
 //remplacer par fig 07
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913984/a8bbc8ec-699e-11e6-86ea-2906255bf3b8.png" >
