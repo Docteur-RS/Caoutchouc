@@ -537,22 +537,22 @@ or you could move the current cursor to this section:
 ```moveCursor("foobar", "smart_section");```
 
 ##Conversation 6##
-*User*:	I would like to order some pizzas...  
-*AI*:	**Sure ! What size ?**  
-*User*:	Medium  
-*AI*:	**Ok... Do you want me to order it now ?**  
-*User*:	YES  
-*AI*:	**Ordering it now... Do you want an other ?**  
-*User*: yes  
-*AI*:	**Ok, what size ? 	//jumps back to an upper level in the tree**  
-*User*: small  
-*AI*: 	**Ok... Do you want me to order it now ?**  
-*User*: No  
-*AI*: 	**No probleme just ask when you are ready**  
-*User*: Order the pizzas now !  
-*AI*: 	**Ordering it now... Do you want an other ?** //jumped to an other level of the tree  
-*User*: No  
-*AI*: 	**Have a good meal**  
+*User*:	&nbsp&nbsp&nbsp&nbsp&nbsp I would like to order some pizzas...  
+*AI*:	&nbsp&nbsp&nbsp&nbsp&nbsp**Sure ! What size ?**  
+*User*:	&nbsp&nbsp&nbsp&nbsp&nbspMedium  
+*AI*:	&nbsp&nbsp&nbsp&nbsp&nbsp**Ok... Do you want me to order it now ?**  
+*User*:	&nbsp&nbsp&nbsp&nbsp&nbspYES  
+*AI*:	&nbsp&nbsp&nbsp&nbsp&nbsp**Ordering it now... Do you want an other ?**  
+*User*: &nbsp&nbsp&nbsp&nbsp&nbspyes  
+*AI*:	&nbsp&nbsp&nbsp&nbsp&nbsp**Ok, what size ? 	//jumps back to an upper level in the tree**  
+*User*: &nbsp&nbsp&nbsp&nbsp&nbspsmall  
+*AI*: 	&nbsp&nbsp&nbsp&nbsp&nbsp**Ok... Do you want me to order it now ?**  
+*User*: &nbsp&nbsp&nbsp&nbsp&nbspNo  
+*AI*: 	&nbsp&nbsp&nbsp&nbsp&nbsp**No probleme just ask when you are ready**  
+*User*: &nbsp&nbsp&nbsp&nbsp&nbspOrder the pizzas now !  
+*AI*: 	&nbsp&nbsp&nbsp&nbsp&nbsp**Ordering it now... Do you want an other ?** //jumped to an other level of the tree  
+*User*: &nbsp&nbsp&nbsp&nbsp&nbspNo  
+*AI*: 	&nbsp&nbsp&nbsp&nbsp&nbsp**Have a good meal**  
 //jumps to "smart_section"  
 
 There are other possible scenarios for this section.
