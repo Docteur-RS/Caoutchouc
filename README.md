@@ -470,35 +470,35 @@ while (true)
 Those are the possible conversations:
 
 ##Conversation 1##
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like dogs ?  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like dogs ?  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Yes I do. And you ?**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**So now there is the two of us.**  
 //goes back to the start  
 
 ##Conversation 2##
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like dogs ?  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like dogs ?  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Yes I do. And you ?**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	no  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	no  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Too bad :-(**  
 //goes back to the start  
 
 ##Conversation 3##
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**It is my favourite pet. And what about you ?.**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Do you have one ?**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**I don't ! Next time I go to your house I want to see it.**  
 //goes back to the start  
 
 
 ##Conversation 4##
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**It is my favourite pet. And what about you ?.**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	yes  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Do you have one ?**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	no  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	no  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Me neither ! Too sad.... I so want one !**  
 //goes back to the start  
 
@@ -522,10 +522,10 @@ Remember that when you move to a section you will always be at the begining of i
 If you want to move to a specific location of the tree you can use a label and jump to it by name.
 Now that we are back to the green section the conversation can start again.
 
-##Conversation 5##  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
+##Conversation 5##
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**It is my favourite pet. And what about you ?.**  
-*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	no  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	no  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Too bad :-)**  
 //goes back to the start  
 
