@@ -538,21 +538,21 @@ or you could move the current cursor to this section:
 
 ##Conversation 6##
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<span style="margin-left: 15px">I would like to order some pizzas...<span>  
-*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Sure ! What size ?**  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;	**Sure ! What size ?**  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Medium  
-*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Ok... Do you want me to order it now ?**  
-*User*:	YES  
-*AI*:	**Ordering it now... Do you want an other ?**  
-*User*: yes  
-*AI*:	**Ok, what size ? 	//jumps back to an upper level in the tree**  
-*User*: small  
-*AI*: 	**Ok... Do you want me to order it now ?**  
-*User*: No  
-*AI*: 	**No probleme just ask when you are ready**  
-*User*: Order the pizzas now !  
-*AI*: 	**Ordering it now... Do you want an other ?** //jumped to an other level of the tree  
-*User*: No  
-*AI*: 	**Have a good meal**  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;	**Ok... Do you want me to order it now ?**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	YES  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;;	**Ordering it now... Do you want an other ?**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yes  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;	**Ok, what size ? 	//jumps back to an upper level in the tree**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;	**Ok... Do you want me to order it now ?**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp; 	**No probleme just ask when you are ready**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Order the pizzas now !  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp; 	**Ordering it now... Do you want an other ?** //jumped to an other level of the tree  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp; 	**Have a good meal**  
 //jumps to "smart_section"  
 
 There are other possible scenarios for this section.
