@@ -25,6 +25,7 @@ This is a simple json structure. If you don't know about JSON you might want to 
 
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913970/8e3a40c0-699e-11e6-8314-d7b7b50e0ccf.png">
 //remplacer par fig 01
+```json
 {
 	//this is level 1
 	"something": {
@@ -42,6 +43,7 @@ This is a simple json structure. If you don't know about JSON you might want to 
 		}
 	}
 }
+```
 
 On level 1 (green) you have got two keys ("something" and "something at the same level"). Those two keys have values. And thoses values are JSON object themselves.
 The JSON object that is the value of the key "something" has a key called "something else". This key is in level 2 (dark blue).
