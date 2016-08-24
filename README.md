@@ -8,11 +8,11 @@ DOCUMENTATION IN PROGRESS
 
 #Introduction#
 
-This tuto/documentation/starting guide is made of 4 parts.
-The first part is all about general information and use of the library.
-In the second part we will go over all the existing JSON key/value pairs that are understood by Caoutchouc.
-In the third part we will discover the availble public method that developpers can use.
-Int last part you wiil see different example of the library functionnalities.
+This tuto/documentation/starting guide is made of 4 parts.  
+The first part is all about general information and use of the library.  
+In the second part we will go over all the existing JSON key/value pairs that are understood by Caoutchouc.  
+In the third part we will discover the availble public method that developpers can use.  
+In the last part you wiil see different examples of the library functionnalities.  
 
 It is recommended to read this documentation from here to the bottom. 
 Even if all of it isn't clear it will let you understand quickly the example part that will fill any comprehension problems of the first parts. (This sentence has no meaning...)
