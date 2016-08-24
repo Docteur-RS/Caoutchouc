@@ -53,22 +53,24 @@ This kind of keys always points to another level.
 -----------------------------------------------
 
 "S|sectionName": {}
-
+```
 "S" is short for "section"  
 "|" is just a delimiter char  
 "sectionName" is the name of the section. You can choose whatever you want as section name but it has to be unique in your tree.  
-
+```
 -> Sections are what functions are to programmation. They act like **containers**. They allow you to structure your interaction tree.
 
 Important : To be valid, the hole interaction tree must be in a section itsef.
 
 //remplacer par fig 03
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913989/a8c42ad2-699e-11e6-90d6-22c348661f9d.png" >
+```
 {
 	"S|main_section": { //1
 	
 	}//2
 }
+```
 
 It must be called ```"main_section"```. The hole tree must be within the "{}" marked as //1 and //2.
 
