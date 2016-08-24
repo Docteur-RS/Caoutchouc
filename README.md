@@ -537,10 +537,10 @@ or you could move the current cursor to this section:
 ```moveCursor("foobar", "smart_section");```
 
 ##Conversation 6##
-*User*:	<span style="margin-left: 15px">I would like to order some pizzas...<span>  
-*AI*:	**Sure ! What size ?**  
-*User*:	Medium  
-*AI*:	**Ok... Do you want me to order it now ?**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<span style="margin-left: 15px">I would like to order some pizzas...<span>  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Sure ! What size ?**  
+*User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Medium  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Ok... Do you want me to order it now ?**  
 *User*:	YES  
 *AI*:	**Ordering it now... Do you want an other ?**  
 *User*: yes  
