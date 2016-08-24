@@ -1,17 +1,27 @@
 ﻿# Caoutchouc
-This library allows the user to parse strings using an "interaction tree". For instance it can be used to create tchat AI.
+This library allows the user to parse strings using an **"interaction tree"**. For instance it can be used to create **tchat AI**.
 This library is under active development and is only at its begining.
 
 
 
 DOCUMENTATION IN PROGRESS
 
+#Introduction#
 
+This tuto/documentation/starting guide is made of 4 parts.
+The first part is all about general information and use of the library.
+In the second part we will go over all the existing JSON key/value pairs that are understood by Caoutchouc.
+In the third part we will discover the availble public method that developpers can use.
+Int last part you wiil see different example of the library functionnalities.
 
-The goal of this library is to go through a special JSON structure like a xml parser would.
+It is recommended to read this documentation from here to the bottom. 
+Even if all of it isn't clear it will let you understand quickly the example part that will fill any comprehension problems of the first parts. (This sentence has no meaning...)
 
-Before you start reading all of the availble key/value pairs, you must understand the notion of cursor.
+#Part 1: General Information#
 
+*The goal of this library is to go through a special JSON structure like a xml parser would.*
+
+Before you start reading all of the availble key/value pairs, you must understand the **notion of cursor**.
 This library is level based. It means that when something matches it moves from one level to another.
 To remember on what level you are and to access the new possibilities of the newly reached level, there are what we call cursors.
 
@@ -19,23 +29,22 @@ A cursor works the same way as cursors that we find in database libraries.
 It points on a certain level of the tree and depending on what happens on the current level it goes up or down.
 You can create multiple cursors at different locations of your tree.
 
-Example of levels:
-
-This is a simple json structure. If you don't know about JSON you might want to find some tutorial about it on the internet.
-
+###Example of levels:###
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913970/8e3a40c0-699e-11e6-8314-d7b7b50e0ccf.png">
+This is a simple json structure. If you don't know about JSON you might want to find some tutorial about it on the internet.
 
 On level 1 (green) you have got two keys ("something" and "something at the same level"). Those two keys have values. And thoses values are JSON object themselves.
 The JSON object that is the value of the key "something" has a key called "something else". This key is in level 2 (dark blue).
 The key "something else" has a value that is also a JSON object. This JSON object is level 3 (light blue).
 
-If you understand that keys point to other JSON objects which themselves point to other JSON objects, then you understand the main principle of this library.
+*If you understand that keys point to other JSON objects which themselves point to other JSON objects, then you understand the main principle of this library.*
 
 
+#Part 2: Interaction tree - Availble key/value pairs for configuration#
 
-There are 7 types of JSON value/keys:
+There are ##7## types of JSON value/keys:
 
-The first 3 have values that are themselves JSON objects.
+The first 3 have values ##that are themselves JSON objects##.
 This kind of keys always points to another level.
 
 -----------------------------------------------
@@ -46,7 +55,7 @@ This kind of keys always points to another level.
 "|" is just a delimiter char
 "sectionName" is the name of the section. You can choose whatever you want as section name but it has to be unique in your tree.
 
--> Sections are what functions are to programmation. They act like containers. They allow you to structure your interaction tree.
+-> Sections are what functions are to programmation. They act like ##containers##. They allow you to structure your interaction tree.
 
 Important : To be valid, the hole interaction tree must be in a section itsef.
 
@@ -58,7 +67,7 @@ Important : To be valid, the hole interaction tree must be in a section itsef.
 	}//2
 }
 
-It must be called "main_section". The hole tree must be within the "{}" marked as //1 and //2.
+It must be called ```"main_section"```. The hole tree must be within the "{}" marked as //1 and //2.
 
 You must know that Caoutchouc's parser does not enter a section on its own.
 //remplacer par fig 02
@@ -81,11 +90,11 @@ Text version:
 }
 ```
 
-For instance, in this tree the parser will search through the green part (mettre en rouge la 1ere partie de l'arbre)
-but will not enter the red section (mettre en vert la 2eme partie de l'arbre) which is proctected by a section.
+For instance, in this tree the parser will search through the green part
+but ##will not enter## the red section which is proctected by a section.
 
-To go through "section 2" you can either create a new cursor with the createCursor("cursorName", "sectionName") method and give it the section with which it needs to start.
-Or you can move the current cursor with the moveCursor("cursorName", "sectionName") method to the desired section.
+To go through "section 2" you can either ##create a new cursor## with the createCursor("cursorName", "sectionName") method and give it the section with which it needs to start.
+Or you can ##move the current cursor## with the moveCursor("cursorName", "sectionName") method to the desired section.
 
 -----------------------------------------------
 
@@ -93,7 +102,7 @@ Or you can move the current cursor with the moveCursor("cursorName", "sectionNam
 
 "R": This means REGEX parsing for the string
 "|": This is only a delimiter
-"string": This string will be parsed with a regex engine. If the value matches the value given to the library, the cursor will move to its value (value of the associated JSON key)
+"string": This string will be parsed with a regex engine. If the value matches the value given to the library, the cursor will move to its value (value of the ##associated JSON key##)
 
 -> For example when you have this kind of level in a tree:
 
@@ -115,11 +124,11 @@ In this case: searchInSection(cursorName, "hello you"), the cursor will move to 
 
 "L|string": {}
 
-This is the same exact system as for "R|string" but this time the parsing won't be done by a regex engine but the string will be matched litteraly.
+This is the same exact system as for "R|string" but this time the parsing won't be done by a regex engine but the string will be matched ##litteraly##.
 
 L": This means Litteral parsing for the string
 "|": This is only a delimiter
-"string": This string will be parsed in a litteral manner. Like (variable == "string"). 
+"string": This string will be parsed in a litteral manner. Like ```(variable == "string")```. 
 
 ```json
 {
@@ -198,14 +207,14 @@ Text version:
 	"_label": "labelName"
 }
 
-when the key "(1)level 3" matches, the cursor moves to its associated object. It sees the jump instruction and the cursor is moved to the indicated level.
-You can jump to any label or to any section by name. You don't have to care about label or section positions.
+when the key "(1)level 3" matches, the cursor moves to its associated object. Then it sees the jump instruction and the cursor is ##moved to the indicated level##.
+You can jump ##to any label or to any section by name##. You don't have to care about label or section positions.
 -----------------------------------------------
 
 "_response": "data"
 
-This key is mandatory to have the library work.
-It must be present in each level, except root level.
+This key is ##mandatory## to have the library work.
+It must be present in ##each level##, except root level.
 
 If we take this tree:
 //remplacer par fig 06 (Pas obligé)
@@ -253,11 +262,11 @@ For instance you can have a function name and some extra data separated by a pip
 -> "_response": "functionName|extraData"
 
 To access the data you must use the method:
--> searchInSection(cursorName, "(1)level 1")
+-> ```searchInSection(cursorName, "(1)level 1")```
 Caoutchouc will search for a matching string in the tree. It will stop at the first key and will enter its associated object and return the value of the "_response" key.
 In this case the above mentionned method will return "data 1".
 
-Then if we executed this method again but with this value -> searchInSection(cursorName, "(1)level 2"), it would return "data 2".
+Then if we executed this method again but with this value -> ```searchInSection(cursorName, "(1)level 2")```, it would return "data 2".
 
 -----------------------------------------------
 
