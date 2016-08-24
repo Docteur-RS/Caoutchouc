@@ -143,7 +143,7 @@ searchInSection(cursorName, "hello world") will match litteraly this key "L|hell
 
 -----------------------------------------------
 
-The last 4 types of keys have strings as values and therefore do not point to JSON objects.
+The last 4 types of keys have strings as values and therefore **do not point to JSON objects**.
 Their purpose is to give information on the level on where they are located.
 
 -----------------------------------------------
@@ -207,14 +207,14 @@ Text version:
 	"_label": "labelName"
 }
 
-when the key "(1)level 3" matches, the cursor moves to its associated object. Then it sees the jump instruction and the cursor is ##moved to the indicated level##.
-You can jump ##to any label or to any section by name##. You don't have to care about label or section positions.
+when the key "(1)level 3" matches, **the cursor moves to its associated object**. Then it sees the jump instruction and the cursor is **moved to the indicated level**.
+You can jump to any label or to any section by name. You don't have to care about label or section positions.
 -----------------------------------------------
 
 "_response": "data"
 
-This key is ##mandatory## to have the library work.
-It must be present in ##each level##, except root level.
+This key is **mandatory** to have the library work.
+It must be present in **each level**, except root level.
 
 If we take this tree:
 //remplacer par fig 06 (Pas obligé)
@@ -257,13 +257,13 @@ Text version:
 }
 ```
 
-We have added a "_response": "data" to each existing level. You can put any kind of data.
+We have added a ```"_response": "data"``` to each existing level. You can put any kind of data.
 For instance you can have a function name and some extra data separated by a pipe.
 -> "_response": "functionName|extraData"
 
 To access the data you must use the method:
 -> ```searchInSection(cursorName, "(1)level 1")```
-Caoutchouc will search for a matching string in the tree. It will stop at the first key and will enter its associated object and return the value of the "_response" key.
+Caoutchouc will **search for a matching string in the tree**. It will stop at the **first key** and will enter its associated object and **return the value** of the "_response" key.
 In this case the above mentionned method will return "data 1".
 
 Then if we executed this method again but with this value -> ```searchInSection(cursorName, "(1)level 2")```, it would return "data 2".
@@ -290,6 +290,7 @@ But the regex is complicated. That's why we have a comment above that explains w
 -----------------------------------------------
 
 
+#Part 3: Public methods#
 
 Now that you know the use of all the key/value pairs of Caoutchouc, we will go over the few public methods that are availble. 
 
@@ -299,30 +300,30 @@ There are only 5 public methods availble. Most of the configuration is done with
 
 createCursor(cursorName, sectionName)
 -> Returns nothing
--> @cursorName: Name to give to your cursor. You can use what you want as string. It will be used to refer to this specific cursor with other methods.
--> @sectionName: A cursor has to start with a section or label. This is its entry point.
--> Allows the creation of a cursor to move around the interaction tree.
+-> **@cursorName:** Name to give to your cursor. You can use what you want as string. It will be used to refer to this specific cursor with other methods.
+-> **@sectionName:** A cursor has to start with a section or label. This is its entry point.
+-> *Allows the creation of a cursor to move around the interaction tree.*
 
 deleteCursor(cursorName)
--> @cursorName: Name of a cursor that was created with the createCursor() method.
--> Deletes the given cursor by name.
+-> **@cursorName:** Name of a cursor that was created with the createCursor() method.
+-> *Deletes the given cursor by name.*
 
 moveCursor(cursorName, sectionName)
--> @cursorName: Name of the cursor to interact with.
--> @sectionName: Name of the section which the cursor will move to. Also works with labels.
--> Allows to move a cursor to another section or label in the interaction tree.
+-> **@cursorName:** Name of the cursor to interact with.
+-> **@sectionName:** Name of the section which the cursor will move to. Also works with labels.
+-> *Allows to move a cursor to another section or label in the interaction tree.*
 
 searchInSection(cursorName, searchValue)
--> @cursorName: Name of the cursor to interact with.
--> @searchValue: This value (string) will be searched through the current level on which the cursors stays.
+-> **@cursorName:** Name of the cursor to interact with.
+-> **@searchValue:** This value (string) will be searched through the current level on which the cursors stays.
+-> *Needs description*
 
 showCurrentLevel()
--> Returns String
--> This is a debugging method. It shows the current level of the cursor
+-> *Returns String. This is a debugging method. It shows the current level of the cursor*
 
 
 
-Time for examples !
+#Part 4: Time for examples !#
 
 this is a complete and working interaction tree.
 There are two sections (not counting root section: "main_section").
