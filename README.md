@@ -24,26 +24,6 @@ Example of levels:
 This is a simple json structure. If you don't know about JSON you might want to find some tutorial about it on the internet.
 
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913970/8e3a40c0-699e-11e6-8314-d7b7b50e0ccf.png">
-//remplacer par fig 01
-```json
-{
-	//this is level 1
-	"something": {
-                //this is level2
-		"something else": {
-                        //this is level 3
-		}
-	},
-	
-	//this is a second key wich is also at level 1
-	"something at the same level": {
-		//this is also a level 2
-		"something else again": {
-                        //this is also level 3
-		}
-	}
-}
-```
 
 On level 1 (green) you have got two keys ("something" and "something at the same level"). Those two keys have values. And thoses values are JSON object themselves.
 The JSON object that is the value of the key "something" has a key called "something else". This key is in level 2 (dark blue).
@@ -71,6 +51,7 @@ This kind of keys always points to another level.
 Important : To be valid, the hole interaction tree must be in a section itsef.
 
 //remplacer par fig 03
+<img src="https://cloud.githubusercontent.com/assets/12821004/17913989/a8c42ad2-699e-11e6-90d6-22c348661f9d.png" >
 {
 	"S|main_section": { //1
 	
@@ -81,6 +62,9 @@ It must be called "main_section". The hole tree must be within the "{}" marked a
 
 You must know that Caoutchouc's parser does not enter a section on its own.
 //remplacer par fig 02
+<img src="https://cloud.githubusercontent.com/assets/12821004/17913981/a1e63a5c-699e-11e6-8ca7-20a785724a3a.png" >
+Text version:
+```json
 {
 	"S|main_section": {
 		
@@ -95,6 +79,7 @@ You must know that Caoutchouc's parser does not enter a section on its own.
 		}
 	}
 }
+```
 
 For instance, in this tree the parser will search through the green part (mettre en rouge la 1ere partie de l'arbre)
 but will not enter the red section (mettre en vert la 2eme partie de l'arbre) which is proctected by a section.
@@ -112,11 +97,13 @@ Or you can move the current cursor with the moveCursor("cursorName", "sectionNam
 
 -> For example when you have this kind of level in a tree:
 
+```json
 {
 	"R|(hello).*(sunshine|sun shine)" : {1},
 	"R|(hello).*(world)" : {2},
 	"R|(hello).*(you)" : {3}
 }
+```
 
 When you use the method -> searchInSection(cursorName, "hello sunshine") this way, Caoutchouc searches for the first match (with the regex engine) 
 So in this case the cursor will move the lower object marked as "1".
@@ -134,11 +121,13 @@ L": This means Litteral parsing for the string
 "|": This is only a delimiter
 "string": This string will be parsed in a litteral manner. Like (variable == "string"). 
 
+```json
 {
 	"L|hello sunshine" : {1},
 	"L|hello world" : {2},
 	"L|hello you" : {3}
 }
+```
 
 searchInSection(cursorName, "hello world") will match litteraly this key "L|hello world". The cursor will move to the object marked as 2
 
@@ -157,6 +146,9 @@ You must replace the value ("labelname") to a unique id of your choice.
 when you have this tree:
 
 //remplacer par fig 04
+<img src="https://cloud.githubusercontent.com/assets/12821004/17913988/a8be914e-699e-11e6-9889-ea50a698a18a.png" >
+Text version:
+```json
 {
 	"L|(1)level 1": {
 			"L|(1)level 2": {
@@ -168,6 +160,7 @@ when you have this tree:
 	},
 	"_label": "labelName"
 }
+```
 
 The root level has 3 keys where two of them points to two other levels and the third key has a label called "labelName".
 Wherever the cursor is, it can be moved to this label by name.
@@ -189,6 +182,8 @@ This key is the same as the moveCursor() method from the library.
 when you have this tree:
 
 //remplacer par fig 05
+<img src="https://cloud.githubusercontent.com/assets/12821004/17913983/a8bbf060-699e-11e6-9304-57ff9c5c604c.png" >
+Text version:
 {
 	"L|(1)level 1": {
 			"L|(1)level 2": {
@@ -213,7 +208,7 @@ This key is mandatory to have the library work.
 It must be present in each level, except root level.
 
 If we take this tree:
-//remplacer par fig 06
+//remplacer par fig 06 (Pas obligé)
 {
 	"L|(1)level 1": {
 			"L|(1)level 2": {
@@ -229,6 +224,9 @@ If we take this tree:
 }
 This is not a valid tree. The right version is:
 //remplacer par fig 07
+<img src="https://cloud.githubusercontent.com/assets/12821004/17913984/a8bbc8ec-699e-11e6-86ea-2906255bf3b8.png" >
+Text version:
+```json
 {
 	"L|(1)level 1": {
 			"_response": "data 1",
@@ -248,6 +246,7 @@ This is not a valid tree. The right version is:
 	},
 	"_label": "labelName"
 }
+```
 
 We have added a "_response": "data" to each existing level. You can put any kind of data.
 For instance you can have a function name and some extra data separated by a pipe.
@@ -268,11 +267,12 @@ This kind of key is ignored by Caoutchouc's parser.
 
 For example it can be used to demistify regex paring.
 
-
+```json
 {
 	"_comment": "this is a complicated email addrese validation regex",
 	"R|/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i"
 }
+```
 
 As you can see in this level, the second key starts by "R|". So this key will be matched against the search value of searchInSection() and analysed by a regex engine to see if the value matches.
 But the regex is complicated. That's why we have a comment above that explains what the regex is doing
@@ -322,6 +322,9 @@ The section "animal_section" alows you to have a conversation about dogs and cat
 The section "smart_section" allows you to order a pizza.
 all "_response" values are formated the same way. They all have the string that correspond to the AI answer.
 
+<img src="https://cloud.githubusercontent.com/assets/12821004/17913990/a8c8c11e-699e-11e6-9227-e82701fdc3a2.png" >
+
+```json
 {
     "S|main_section": {
         "S|animal_section": {
@@ -389,11 +392,13 @@ all "_response" values are formated the same way. They all have the string that 
 	}
     }
 }
+```
 
 To use this interaction tree we will make a simple script.
 
-//first we must define a function called print() that will display a string.
+First we must define a function called print() that will display a string.
 
+```javascript
 //outputs a string to the screen
 function print(sentence)
 {
@@ -420,26 +425,31 @@ var input = get_input(); // Do you like dogs ?
 var treeOutput = searchInSection("foo", input); //returns -> "print|Yes I do. And you ?"
 
 //printing response from the AI
-functionName(treeOutput); 
+print(treeOutput); 
+```
+
 
 This can be done for each level of the tree. Fortunately simple programing allows you to have less code.
 All the interpretation code can be resumed by this while loop.
 
+```javascript
 //turns for ever
 while (true)
 {
 	//we get the iuput from the user that we pass to the searchInSection method which gives us the right response to give to the print function.
 	print(Caoutchouc.searchInSection("foo", get_input())); 
 }
-
+```
 
 The hole script:
+```javascript
 var Caoutchouc = require("Caoutchouc");
 Caoutchouc.createCursor("foo", "animal_section");
 while (true)
 {
 	print(searchInSection("foo", get_input())); 
 }
+```
 
 Those are the possible conversations:
 
@@ -537,16 +547,20 @@ You can have a more complicated "_response".
 
 For instance:
 
+```
 "_response": "name_of_a_function|data"
+```
 
 this could be exploit like this.
 
+```javascript
 var treeOutput = Caoutchouc.searchInSection("foo", "something")
 
 var functionName = treeOutput.splice("|")[0];
 var data = treeOutput.splice("|")[1];
 
 functionName(data); //javaScript allows you to call a function/method by name and pass it some data.
+```
 By saving a function/method along with some data you can create some really complex interactions.
 
 
