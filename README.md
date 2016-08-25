@@ -443,10 +443,13 @@ function get_input()
 //getting the library...
 var Caoutchouc = require("Caoutchouc");
 
+//instanciate an object of Caoutchouc.
+var caoutchoucObj = Caoutchouc("./tree.json" ,true);
+
 //then we must create a cursor that will go through the tree. We will call it "foo".
 
 //creates a cursor name "foo" that starts into the section "animal_section"
-Caoutchouc.createCursor("foo", "animal_section");
+caoutchoucObj.createCursor("foo", "animal_section");
 
 //now we can ask the user to type something with the function get_input(). The result will be passed as parameter to the searchInSection() method.
 
@@ -466,7 +469,7 @@ All the interpretation code can be resumed by this while loop.
 while (true)
 {
 	//we get the input from the user that we pass to the searchInSection method which gives us the right response to give to the print function.
-	print(Caoutchouc.searchInSection("foo", get_input())); 
+	print(caoutchoucObj.searchInSection("foo", get_input())); 
 }
 ```
 
@@ -484,11 +487,13 @@ function get_input() //fake function
 	return input;
 }
 
-Caoutchouc.createCursor("foo", "animal_section");
+var caoutchoucObj = Caoutchouc("./tree.json" ,true);
+
+caoutchoucObj.createCursor("foo", "animal_section");
 
 while (true)
 {
-	print(searchInSection("foo", get_input())); 
+	print(caoutchoucObj.searchInSection("foo", get_input())); 
 }
 ```
 
