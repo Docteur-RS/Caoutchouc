@@ -1,10 +1,10 @@
 ﻿# Caoutchouc
 
 *Caoutchouc is a library that allows you to parse a specific JSON architecture called an interaction tree.  
-This interaction tree is made of keys and values. Each keys are either regexs, literal strings or specific instructions that have specific effects.  
+This interaction tree is made of keys and values. Each key is either a regex, a litteral string or a specific instruction that has a specific effect.  
 The library allows you to search for a string that would match a regex or a literal string of the tree.
 When your search matches, you get the associated data from the tree.
-The results of searches are based on the current level of search in the tree.*
+The results of the searches are based on the current level of search in the tree.*
 
 This library is under active development and is only at its begining.
 
@@ -20,7 +20,7 @@ This tuto/documentation/starting guide is made of 4 parts.
 4. In the last part you will see different examples of the library functionnalities.  
 
 It is recommended to read this documentation from here to the bottom.  
-Even if some sections of the documentation may not be clear to you yet. It will let you understand better the example section.  
+Even if some sections of the documentation may not be clear to you yet, it will help you understand better the example section.  
 If something in the example section is not clear go back to the documentation part.  
 
 
@@ -311,8 +311,8 @@ There are only 5 public methods availble. Most of the configuration is done with
 
 Constructor:
 new Caoutchouc(path, boolean);
--> **@path:** (String) This is the path of your interaction tree. ex: "./interactionsTree/tree.json"
--> *Allows to instanciate the library*
+-> **@path:** (String) This is the path of your interaction tree. ex: "./interactionsTree/tree.json"  
+-> *Allows to instanciate the library*  
 
 **createCursor(cursorName, sectionName)**  
 -> **@cursorName:** Name to give to your cursor. You can use what you want as string. It will be used to refer to this specific cursor with other methods.  
@@ -331,12 +331,13 @@ new Caoutchouc(path, boolean);
 **searchInSection(cursorName, searchValue)**  
 -> **@cursorName:** Name of the cursor to interact with. 
 -> **@searchValue:** This value (string) will be searched through the current level on which the cursors stays.  
--> Return value: String from the associated data from the tree  
+-> Return value: String from the associated data from the tree.  
 -> *When a string matches (regex or litteral) it enters a new level. In this level there is a key named "_response". This key contains the associated data of the match. So it is the content of the value of the "_response" key that is returned from the function.*  
 
 **showCurrentLevel(cursorName)**  
--> **@cursorName:** Name of the cursor to interact with. 
--> *Returns String. This is a debugging method. It shows the current level of the cursor*  
+-> **@cursorName:** Name of the cursor to interact with.  
+-> Returns value: String.  
+-> *This is a debugging method. It shows the current level of the cursor*  
 
 
 
