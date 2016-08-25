@@ -16,7 +16,7 @@ This tuto/documentation/starting guide is made of 4 parts.
 
 1. The first part is all about general information and use of the library.  
 2. In the second part we will go over all the existing JSON key/value pairs that are understood by Caoutchouc.  
-3. In the third part we will discover the availble public method that developpers can use.  
+3. In the third part we will discover the available public method that developpers can use.  
 4. In the last part you will see different examples of the library functionnalities.  
 
 It is recommended to read this documentation from here to the bottom.  
@@ -28,7 +28,7 @@ If something in the example section is not clear go back to the documentation pa
 
 *The goal of this library is to go through a special JSON structure like a xml parser would.*
 
-Before you start reading all of the availble key/value pairs, you must understand the **notion of cursor**.
+Before you start reading all of the available key/value pairs, you must understand the **notion of cursor**.
 This library is level based. It means that when something matches it moves from one level to another.
 To remember on what level you are and to access the new possibilities of the newly reached level, there are what we call cursors.
 
@@ -49,7 +49,7 @@ The key "something else" has a value that is also a JSON object. This JSON objec
 *If you understand that keys point to other JSON objects which themselves point to other JSON objects, then you understand the main principle of this library.*
 
 
-#Part 2: Interaction tree - Availble key/value pairs for configuration#
+#Part 2: Interaction tree - Available key/value pairs for configuration#
 
 *There are* **7** *types of JSON value/keys:*
 
@@ -316,11 +316,11 @@ But the regex is complicated. That's why we have a comment above that explains w
 
 #Part 3: Public methods#
 
-Now that you know the use of all the key/value pairs of Caoutchouc, we will go over the few public methods that are availble. 
+Now that you know the use of all the key/value pairs of Caoutchouc, we will go over the few public methods that are available. 
 
 <h2>Public methods</h2>
 
-There are only 5 public methods availble. Most of the configuration is done with the interaction tree.
+There are only 5 public methods available. Most of the configuration is done with the interaction tree.
 
 Constructor:  
 new Caoutchouc(path, boolean);  
