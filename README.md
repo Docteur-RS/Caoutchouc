@@ -312,27 +312,27 @@ Now that you know the use of all the key/value pairs of Caoutchouc, we will go o
 
 There are only 5 public methods availble. Most of the configuration is done with the interaction tree.
 
-createCursor(cursorName, sectionName)  
--> Returns nothing  
+**createCursor(cursorName, sectionName)**  
 -> **@cursorName:** Name to give to your cursor. You can use what you want as string. It will be used to refer to this specific cursor with other methods.  
 -> **@sectionName:** A cursor has to start with a section or label. This is its entry point.  
 -> *Allows the creation of a cursor to move around the interaction tree.*  
 
-deleteCursor(cursorName)  
+**deleteCursor(cursorName)**  
 -> **@cursorName:** Name of a cursor that was created with the createCursor() method.  
 -> *Deletes the given cursor by name.*  
 
-moveCursor(cursorName, sectionName)  
+**moveCursor(cursorName, sectionName)**  
 -> **@cursorName:** Name of the cursor to interact with.  
 -> **@sectionName:** Name of the section which the cursor will move to. Also works with labels. 
 -> *Allows to move a cursor to another section or label in the interaction tree.*  
 
-searchInSection(cursorName, searchValue)  
+**searchInSection(cursorName, searchValue)**  
 -> **@cursorName:** Name of the cursor to interact with. 
 -> **@searchValue:** This value (string) will be searched through the current level on which the cursors stays.  
--> *Needs description*  
+-> Return value: String from the associated data from the tree  
+-> *When a string matches (regex or litteral) it enters a new level. In this level there is a key named "_response". This key contains the associated data of the match. So it is the content of the value of the "_response" key that is returned from the function.*  
 
-showCurrentLevel()  
+**showCurrentLevel()**  
 -> *Returns String. This is a debugging method. It shows the current level of the cursor*  
 
 
