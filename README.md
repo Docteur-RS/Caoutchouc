@@ -58,6 +58,8 @@ The key "something else" has a value that is also a JSON object. This JSON objec
 
 -----------------------------------------------
 
+###Section key###
+
 "S|sectionName": {}
 ```
 "S" is short for "section"  
