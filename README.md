@@ -37,18 +37,18 @@ This is a simple json structure. If you don't know about JSON you might want to 
 On level 1 (green) you have got two keys ("something" and "something at the same level").  
 Those two keys have values. And thoses values are JSON object themselves.
 The JSON object that is the value of the key "something" has a key called "something else".  
-This key is in level 2 (dark blue).  
-The key "something else" has a value that is also a JSON object. This JSON object is level 3 (light blue).  
+This key is in level 2 (blue).  
+The key "something else" has a value that is also a JSON object. This JSON object is level 3 (red).  
 
 *If you understand that keys point to other JSON objects which themselves point to other JSON objects, then you understand the main principle of this library.*
 
 
 #Part 2: Interaction tree - Availble key/value pairs for configuration#
 
-There are **7** types of JSON value/keys:
+*There are **7** types of JSON value/keys:*
 
-The first 3 have values **that are themselves JSON objects**.
-This kind of keys always points to another level.
+*The first 3 have values **that are themselves JSON objects**.
+This kind of keys always points to another level.*
 
 -----------------------------------------------
 
@@ -148,8 +148,8 @@ L": This means Litteral parsing for the string
 
 -----------------------------------------------
 
-The last 4 types of keys have strings as values and therefore **do not point to JSON objects**.
-Their purpose is to give information on the level on where they are located.
+*The last 4 types of keys have strings as values and therefore **do not point to JSON objects**.
+Their purpose is to give information on the level on where they are located.*
 
 -----------------------------------------------
 
