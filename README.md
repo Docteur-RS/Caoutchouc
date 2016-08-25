@@ -1,8 +1,12 @@
 ﻿# Caoutchouc
-This library allows the user to parse strings using an **"interaction tree"**. For instance it can be used to create **tchat AI**.
+
+Caoutchouc is a library that allows you to parse a specific JSON architecture called an interaction tree.  
+This interaction tree is made of keys and values. Each keys are either regexs, literal strings or specific instructions that have specific effects.  
+The library allows you to search for a string that would match a regex or a literal string of the tree.
+When your search matches, you get the associated data from the tree.
+The results of searches are based on the current level of search in the tree.
+
 This library is under active development and is only at its begining.
-
-
 
 DOCUMENTATION IN PROGRESS
 
@@ -13,10 +17,12 @@ This tuto/documentation/starting guide is made of 4 parts.
 1. The first part is all about general information and use of the library.  
 2. In the second part we will go over all the existing JSON key/value pairs that are understood by Caoutchouc.  
 3. In the third part we will discover the availble public method that developpers can use.  
-4. In the last part you wiil see different examples of the library functionnalities.  
+4. In the last part you will see different examples of the library functionnalities.  
 
-It is recommended to read this documentation from here to the bottom. 
-Even if all of it isn't clear it will let you understand quickly the example part that will fill any comprehension problems of the first parts. (This sentence has no meaning...)
+It is recommended to read this documentation from here to the bottom.  
+Even if some sections of the documentation may not be clear to you yet. It will let you understand better the example section.  
+If something in the example section is not clear go back to the documentation part.  
+
 
 #Part 1: General Information#
 
@@ -462,7 +468,19 @@ while (true)
 The hole script:
 ```javascript
 var Caoutchouc = require("Caoutchouc");
+
+function print(sentence)
+{
+	console.log(sentence)
+}
+
+function get_input() //fake function
+{
+	return input;
+}
+
 Caoutchouc.createCursor("foo", "animal_section");
+
 while (true)
 {
 	print(searchInSection("foo", get_input())); 
@@ -505,24 +523,31 @@ Those are the possible conversations:
 //goes back to the start  
 
 Details:
-The user inputs this string : "Do you like cats ?"
--> Because our cursor is on the section "animal_section", the parsing is contained to the top part of the green section. 
-Remember that Caoutchouc's parser won't leave a section by itself.
-The parser tries to match the first key of the tree ("L|Do you like dogs ?") litteraly to the user input.
-Because it does not match, Caoutchouc tries the next key. The next key is "Do you like cats ?" which matches the user's input.
-Because the key matches, the cursor goes down to the corresponding level (the blue level).
-In this blue level the parser returns to the program the value of the key "_response" which is "It's my favourite pet. And what about you".
-This string will be print to the screen as the response of the AI.
-The next time that the user inputs something, the cursor, which still is at the blue level, will have to try and match to keys ("L|yes" and "L|no").
-In this case it is a "yes" that was inputed. So the cursor moves to the level that corresponds to the "yes" (purple level) and returns the value of the key "_response" which is "Do you have one".
-Next the user inputs "no". On our current level there are again two keys which are "L|yes" and "L|no".
-It will be the "L|no" key that will match. 
-So the cursor will move down to the new level (light blue) and return the value of the "_response" key (which is "I don't ! Next time we meet I want to see it").
-There are no more levels. But on our current level we have got a jump key "_jump" that points to the section "animal_section".
-As soon as the parser bumps into this jump instruction, the cursor is moved to the green level.
-Remember that when you move to a section you will always be at the begining of it.
-If you want to move to a specific location of the tree you can use a label and jump to it by name.
-Now that we are back to the green section the conversation can start again.
+The user inputs this string : "*Do you like cats ?*"  
+-> Because our cursor is on the section "animal_section", the parsing is **contained** to the top part of the green section.  
+Remember that Caoutchouc's parser won't leave a section by itself.  
+
+The parser tries to match the first key of the tree ("*L|Do you like dogs ?*") litteraly to the user input.  
+
+Because it does not match, Caoutchouc tries the next key. The next key is "*Do you like cats ?*" which matches the user's input.  
+Because the key matches, **the cursor goes down to the corresponding level** (the blue level).  
+
+In this blue level **the parser returns to the program the value of the key "_response"** which is "*It's my favourite pet. And what about you*".  
+This string will be print to the screen as the response of the AI.  
+
+The next time that the user inputs something, the cursor, which still is at the blue level, will have to try and match two keys ("*L|yes*" or "*L|no*").  
+In this case it is a "*yes*" that was inputed. So the cursor moves to the level that corresponds to the "*yes*" (purple level) and returns the value of the key "_response" which is "*Do you have one*".  
+
+Next the user inputs "*no*". On our current level there are again two keys which are "*L|yes*" and "*L|no*".  
+It will be the "*L|no*" key that will match.  
+ So the cursor will move down to the new level (light blue) and return the value of the "_response" key (which is "*I don't ! Next time we meet I want to see it*").  
+
+There are no more levels. But on our current level we have got a jump key "_jump" that points to the section "animal_section".  
+As soon as the parser bumps into this jump instruction, the cursor is moved to the green level.  
+Remember that when you move to a section you will always be at the begining of it. 
+If you want to move to a specific location of the tree you can use a label and jump to it by name.  
+
+Now that we are back to the green section the conversation can start again.  
 
 ##Conversation 5##
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Do you like cats ?  
