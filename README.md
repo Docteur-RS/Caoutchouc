@@ -68,7 +68,6 @@ This kind of keys always points to another level.*
 
 Important : To be valid, the hole interaction tree must be in a section itsef.
 
-//remplacer par fig 03
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913989/a8c42ad2-699e-11e6-90d6-22c348661f9d.png" >
 ```
 {
@@ -81,7 +80,7 @@ Important : To be valid, the hole interaction tree must be in a section itsef.
 It must be called ```"main_section"```. The hole tree must be within the "{}" marked as //1 and //2.
 
 You must know that Caoutchouc's parser does not enter a section on its own.
-//remplacer par fig 02
+
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913981/a1e63a5c-699e-11e6-8ca7-20a785724a3a.png" >
 Text version:
 ```json
@@ -165,7 +164,6 @@ You must replace the value ("labelname") to a unique id of your choice.
 
 when you have this tree:
 
-//remplacer par fig 04
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913988/a8be914e-699e-11e6-9889-ea50a698a18a.png" >
 Text version:
 ```json
@@ -200,7 +198,6 @@ This key is the same as the moveCursor() method from the library.
 
 when you have this tree:
 
-//remplacer par fig 05
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913983/a8bbf060-699e-11e6-9304-57ff9c5c604c.png" >
 Text version:
 ```json
@@ -230,7 +227,7 @@ This key is **mandatory** to have the library work.
 It must be present in **each level**, except root level.
 
 If we take this tree:
-//remplacer par fig 06 (Pas obligé)
+
 ```json
 {
 	"L|(1)level 1": {
@@ -247,7 +244,7 @@ If we take this tree:
 }
 ```
 This is not a valid tree. The right version is:
-//remplacer par fig 07
+
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913984/a8bbc8ec-699e-11e6-86ea-2906255bf3b8.png" >
 Text version:
 ```json
