@@ -51,7 +51,7 @@ The key "something else" has a value that is also a JSON object. This JSON objec
 
 #Part 2: Interaction tree - Availble key/value pairs for configuration#
 
-*There are **7** types of JSON value/keys:*
+*There are* **7** *types of JSON value/keys:*
 
 *The first 3 have values **that are themselves JSON objects**.
 This kind of keys always points to another level.*
@@ -221,6 +221,7 @@ Text version:
 
 when the key "(1)level 3" matches, **the cursor moves to its associated object**. Then it sees the jump instruction and the cursor is **moved to the indicated level**.  
 You can jump to any label or to any section by name. You don't have to care about label or section positions.
+
 -----------------------------------------------
 
 "_response": "data"
@@ -339,12 +340,13 @@ There are only 5 public methods availble. Most of the configuration is done with
 
 #Part 4: Time for examples !#
 
-this is a complete and working interaction tree.  
+This is a complete and working interaction tree.  
+It is recommended to open the image in another window in order to have it and the examples shown at the same time.  
 There are two sections (not counting root section: "main_section").  
 
 The section "animal_section" alows you to have a conversation about dogs and cats.  
 The section "smart_section" allows you to order a pizza.  
-all "_response" values are formated the same way. They all have the string that correspond to the AI answer.  
+All "_response" values are formated the same way. They all have the string that correspond to the AI answer.  
 
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913990/a8c8c11e-699e-11e6-9227-e82701fdc3a2.png" >
 
@@ -540,7 +542,7 @@ In this case it is a "*yes*" that was inputed. So the cursor moves to the level 
 
 Next the user inputs "*no*". On our current level there are again two keys which are "*L|yes*" and "*L|no*".  
 It will be the "*L|no*" key that will match.  
- So the cursor will move down to the new level (light blue) and return the value of the "_response" key (which is "*I don't ! Next time we meet I want to see it*").  
+ So the cursor will move down to the new level (light blue) and return the value of the "_response" key (which is "*Me neither ! Too sad... I so want one !*").  
 
 There are no more levels. But on our current level we have got a jump key "_jump" that points to the section "animal_section".  
 As soon as the parser bumps into this jump instruction, the cursor is moved to the green level.  
