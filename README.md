@@ -292,7 +292,7 @@ Then if we executed this method again but with this value -> ```searchInSection(
 
 -----------------------------------------------
 
-###7) 'COmment' key###
+###7) 'Comment' key###
 
 "_comment": "this is a comment"
 
@@ -322,9 +322,10 @@ Now that you know the use of all the key/value pairs of Caoutchouc, we will go o
 
 There are only 5 public methods availble. Most of the configuration is done with the interaction tree.
 
-Constructor:
-new Caoutchouc(path, boolean);
+Constructor:  
+new Caoutchouc(path, boolean);  
 -> **@path:** (String) This is the path of your interaction tree. ex: "./interactionsTree/tree.json"  
+-> **@boolean** (Boolean) Will be probably removed shortly. You can pass whatever you want for now.  
 -> *Allows to instanciate the library*  
 
 **createCursor(cursorName, sectionName)**  
