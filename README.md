@@ -591,7 +591,8 @@ Don't forget that you would need to create a new cursor to access the other sect
 or you could move the current cursor to this section:  
 ```moveCursor("foobar", "smart_section");```
 
-or from the jump key. Like this: ```"_jump": "smart_section"```.  
+or from the jump key. Like this:  
+```"_jump": "smart_section"```.  
 But the cursor will have to go through the level containing the key for the effect to take place.  
 
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I would like to order some pizzas...  
