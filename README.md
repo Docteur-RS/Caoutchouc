@@ -459,7 +459,7 @@ function get_input()
 var Caoutchouc = require("Caoutchouc");
 
 //instanciate an object of Caoutchouc.
-var caoutchoucObj = Caoutchouc("./tree.json" ,true);
+var caoutchoucObj = Caoutchouc("./tree.json", true);
 
 //then we must create a cursor that will go through the tree. We will call it "foo".
 
@@ -469,7 +469,7 @@ caoutchoucObj.createCursor("foo", "animal_section");
 //now we can ask the user to type something with the function get_input(). The result will be passed as parameter to the searchInSection() method.
 
 var input = get_input(); // Do you like dogs ?
-var treeOutput = searchInSection("foo", input); //returns -> "print|Yes I do. And you ?"
+var treeOutput = caoutchoucObj.searchInSection("foo", input); //returns -> "print|Yes I do. And you ?"
 
 //printing response from the AI
 print(treeOutput); 
@@ -590,6 +590,9 @@ Don't forget that you would need to create a new cursor to access the other sect
 
 or you could move the current cursor to this section:  
 ```moveCursor("foobar", "smart_section");```
+
+or from the jump key. Like this: ```"_jump": "smart_section"```.  
+But the cursor will have to go through the level containing the key for the effect to take place.  
 
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I would like to order some pizzas...  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Sure ! What size ?**  
