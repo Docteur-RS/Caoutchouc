@@ -58,7 +58,7 @@ The key "something else" has a value that is also a JSON object. This JSON objec
 
 -----------------------------------------------
 
-###Section key###
+###1) 'Section' key###
 
 "S|sectionName": {}
 ```
@@ -109,6 +109,8 @@ Or you can **move the current cursor** with the moveCursor("cursorName", "sectio
 
 -----------------------------------------------
 
+###2) 'Regex match' key###
+
 "R|string": {}
 
 "R": This means REGEX parsing for the string  
@@ -132,6 +134,8 @@ In this case: searchInSection(cursorName, "hello you"), the cursor will move to 
 
 
 -----------------------------------------------
+
+###3) 'Litteral string match' key###
 
 "L|string": {}
 
@@ -158,6 +162,8 @@ L": This means Litteral parsing for the string
 Their purpose is to give information on the level on where they are located.*
 
 -----------------------------------------------
+
+###4) 'Label' key###
 
 "_label": "labelName"  
 This key acts like the programming goto/label paradigm.  
@@ -192,6 +198,7 @@ By doing this you move your cursor back to the root level and everything can sta
 
 -----------------------------------------------
 
+###5) 'Jump' key###
 
 "_jump": "sectionOrLabelName"
 
@@ -221,6 +228,8 @@ when the key "(1)level 3" matches, **the cursor moves to its associated object**
 You can jump to any label or to any section by name. You don't have to care about label or section positions.
 
 -----------------------------------------------
+
+###6) 'Response' key###
 
 "_response": "data"
 
@@ -282,6 +291,8 @@ In this case the above mentionned method will return "data 1".
 Then if we executed this method again but with this value -> ```searchInSection(cursorName, "(1)level 2")```, it would return "data 2".
 
 -----------------------------------------------
+
+###7) 'COmment' key###
 
 "_comment": "this is a comment"
 
