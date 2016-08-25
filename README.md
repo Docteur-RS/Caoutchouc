@@ -600,7 +600,7 @@ But the cursor will have to go through the level containing the key for the effe
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Medium  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Ok... Do you want me to order it now ?**  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	YES  
-*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Ordering it now... Do you want an other ?**  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Ordering it now... Do you want another ?**  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yes  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Ok, what size ? 	//jumps back to an upper level in the tree**  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; small  
@@ -608,7 +608,7 @@ But the cursor will have to go through the level containing the key for the effe
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**No probleme just ask when you are ready**  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Order the pizzas now !  
-*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Ordering it now... Do you want an other ?** //jumped to an other level of the tree  
+*AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Ordering it now... Do you want another ?** //jumped to another level of the tree  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Have a good meal**  
 //jumps to "smart_section"  
