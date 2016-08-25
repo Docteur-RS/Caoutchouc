@@ -1,10 +1,10 @@
 ﻿# Caoutchouc
 
-Caoutchouc is a library that allows you to parse a specific JSON architecture called an interaction tree.  
+*Caoutchouc is a library that allows you to parse a specific JSON architecture called an interaction tree.  
 This interaction tree is made of keys and values. Each keys are either regexs, literal strings or specific instructions that have specific effects.  
 The library allows you to search for a string that would match a regex or a literal string of the tree.
 When your search matches, you get the associated data from the tree.
-The results of searches are based on the current level of search in the tree.
+The results of searches are based on the current level of search in the tree.*
 
 This library is under active development and is only at its begining.
 
@@ -53,8 +53,8 @@ The key "something else" has a value that is also a JSON object. This JSON objec
 
 *There are* **7** *types of JSON value/keys:*
 
-*The first 3 have values **that are themselves JSON objects**.
-This kind of keys always points to another level.*
+*The first 3 have values* **that are themselves JSON objects**.
+*This kind of keys always points to another level.*
 
 -----------------------------------------------
 
@@ -66,9 +66,8 @@ This kind of keys always points to another level.*
 ```
 -> Sections are what functions are to programmation. They act like **containers**. They allow you to structure your interaction tree.
 
-Important : To be valid, the hole interaction tree must be in a section itsef.
+**Important:** To be valid, the hole interaction tree must be in a section itsef.
 
-<img src="https://cloud.githubusercontent.com/assets/12821004/17913989/a8c42ad2-699e-11e6-90d6-22c348661f9d.png" >
 ```
 {
 	"S|main_section": { //1
@@ -134,7 +133,7 @@ In this case: searchInSection(cursorName, "hello you"), the cursor will move to 
 
 "L|string": {}
 
-This is the same exact system as for "R|string" but this time the parsing won't be done by a regex engine but the string will be matched ##litteraly##.
+This is the same exact system as for "R|string" but this time the parsing won't be done by a regex engine but the string will be matched **litteraly**.
 
 L": This means Litteral parsing for the string  
 "|": This is only a delimiter  
@@ -330,7 +329,8 @@ There are only 5 public methods availble. Most of the configuration is done with
 -> Return value: String from the associated data from the tree  
 -> *When a string matches (regex or litteral) it enters a new level. In this level there is a key named "_response". This key contains the associated data of the match. So it is the content of the value of the "_response" key that is returned from the function.*  
 
-**showCurrentLevel()**  
+**showCurrentLevel(cursorName)**  
+-> **@cursorName:** Name of the cursor to interact with. 
 -> *Returns String. This is a debugging method. It shows the current level of the cursor*  
 
 
@@ -347,6 +347,7 @@ All "_response" values are formated the same way. They all have the string that 
 
 <img src="https://cloud.githubusercontent.com/assets/12821004/17913990/a8c8c11e-699e-11e6-9227-e82701fdc3a2.png" >
 
+Text version:  
 ```json
 {
     "S|main_section": {
@@ -459,7 +460,7 @@ All the interpretation code can be resumed by this while loop.
 //turns for ever
 while (true)
 {
-	//we get the iuput from the user that we pass to the searchInSection method which gives us the right response to give to the print function.
+	//we get the input from the user that we pass to the searchInSection method which gives us the right response to give to the print function.
 	print(Caoutchouc.searchInSection("foo", get_input())); 
 }
 ```
@@ -555,6 +556,9 @@ Now that we are back to the green section the conversation can start again.
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	**Too bad :-)**  
 //goes back to the start  
 
+
+##Conversation 6##
+
 Now, same thing for the conversations of the other section.  
 Don't forget that you would need to create a new cursor to access the other section:  
 ```createCursor("foobar", "smart_section");```
@@ -562,7 +566,6 @@ Don't forget that you would need to create a new cursor to access the other sect
 or you could move the current cursor to this section:  
 ```moveCursor("foobar", "smart_section");```
 
-##Conversation 6##
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I would like to order some pizzas...  
 *AI*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	**Sure ! What size ?**  
 *User*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Medium  
