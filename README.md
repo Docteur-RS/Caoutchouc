@@ -309,6 +309,11 @@ Now that you know the use of all the key/value pairs of Caoutchouc, we will go o
 
 There are only 5 public methods availble. Most of the configuration is done with the interaction tree.
 
+Constructor:
+new Caoutchouc(path, boolean);
+-> **@path:** (String) This is the path of your interaction tree. ex: "./interactionsTree/tree.json"
+-> *Allows to instanciate the library*
+
 **createCursor(cursorName, sectionName)**  
 -> **@cursorName:** Name to give to your cursor. You can use what you want as string. It will be used to refer to this specific cursor with other methods.  
 -> **@sectionName:** A cursor has to start with a section or label. This is its entry point.  
@@ -588,9 +593,8 @@ There are other possible scenarios for this section.
 
 
 
-You can have a more complicated "_response".
-
-For instance:
+You can have a more complicated "_response".  
+For instance:  
 
 ```
 "_response": "name_of_a_function|data"
